@@ -8,9 +8,9 @@ workflows:
     environment:
       ios_signing:
         provisioning_profiles:
-         - profile:codeMagicProfile
+         - profile: codeMagicProfile
         certificates:
-         - certificate:certifacateTest
+         - certificate: certifacateTest
       vars:
         BUNDLE_ID: "codeMagicTest"
         XCODE_PROJECT: "CodeMagicProjectTest.xcodeproj"
