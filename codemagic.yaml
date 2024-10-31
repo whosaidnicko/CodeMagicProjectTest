@@ -1,20 +1,22 @@
 
 workflows:
-  MrBetanoSavings:
+  IOS_WORKFLOW:
     name: iOS Native
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: accesCodeMagic
+      app_store_connect: magicKey
     environment:
       ios_signing:
-        distribution_type: app_store
-        bundle_identifier: com.savings.mond
+        provisioning_profiles:
+         - profile:codeMagicProfile
+        certificates:
+         - certificate:certifacateTest
       vars:
-        BUNDLE_ID: "com.savings.mond"
-        XCODE_WORKSPACE: "MrBetanoSavings.xcodeproj"
-        XCODE_SCHEME: "MrBetanoSavings"
-        APP_STORE_APPLE_ID: 6737456175
+        BUNDLE_ID: "codeMagicTest"
+        XCODE_WORKSPACE:"CodeMagicProjectTest.xcodeproj"
+        XCODE_SCHEME: "CodeMagicProjectTest"
+        APP_STORE_APPLE_ID: 6737609002
       xcode: 15.3
 
     scripts:
